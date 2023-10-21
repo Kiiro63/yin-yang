@@ -132,11 +132,6 @@ function populateGrid() {
     }
 }
 
-// Обработчик кнопки "Очистить"
-document.querySelector("#clear-button").addEventListener("click", () => {
-    clearGrid();
-});
-
 // Функция для очистки сетки
 function clearGrid() {
     for (let row = 0; row < numRows; row++) {
@@ -147,6 +142,7 @@ function clearGrid() {
             grid[row][col] = 0;
         }
     }
+    stopGame()
 }
 
 
@@ -163,6 +159,11 @@ document.querySelector("#start-button").addEventListener("click", () => {
 // Обработчик кнопки "Стоп"
 document.querySelector("#stop-button").addEventListener("click", () => {
     stopGame();
+});
+
+// Обработчик кнопки "Очистить"
+document.querySelector("#clear-button").addEventListener("click", () => {
+    clearGrid();
 });
 
 let intervalId = null;
