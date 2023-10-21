@@ -110,6 +110,7 @@ function countNeighbors(row, col) {
     return count;
 }
 
+// Функция для первого заполнения сетки популяции ячеек
 function populateGrid() {
     for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
